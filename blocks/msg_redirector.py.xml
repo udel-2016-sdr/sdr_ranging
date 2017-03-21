@@ -1,0 +1,19 @@
+<block>
+  <name>Message Redirector</name>
+  <key>msg_redirector</key>
+  <category>[GRC Hier Blocks]</category>
+  <import>from msg_redirector import msg_redirector</import>
+  <make>msg_redirector(
+    port=$port,
+    callback=self.handler,
+)</make>
+  <param>
+    <name>Port Name</name>
+    <key>port</key>
+    <value></value>
+    <type>string</type>
+  </param>
+  <doc>Redirects messages to callback function. Callback funtion defaults to 'self.handler'.
+	  
+/home/mwezz/GNURadio/.grc_gnuradio/msg_redirector.py</doc>
+</block>

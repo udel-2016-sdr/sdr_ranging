@@ -1,0 +1,69 @@
+<block>
+  <name>Correlator State Machine (v1)</name>
+  <key>corr_state_machine_v1</key>
+  <category>[GRC Hier Blocks]</category>
+  <import>from corr_state_machine_v1 import corr_state_machine_v1  # grc-generated hier_block</import>
+  <make>corr_state_machine_v1(
+    dly_cont_name=$dly_cont_name,
+    max_delay=$max_delay,
+)</make>
+  <callback>set_dly_cont_name($dly_cont_name)</callback>
+  <callback>set_max_delay($max_delay)</callback>
+  <param>
+    <name>Delay Controller Name</name>
+    <key>dly_cont_name</key>
+    <value></value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Maximum Delay</name>
+    <key>max_delay</key>
+    <value>0</value>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>sm_cmd</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+  <sink>
+    <name>corr_value</name>
+    <type>float</type>
+    <vlen>1</vlen>
+  </sink>
+  <source>
+    <name>delay_cmd</name>
+    <type>message</type>
+  </source>
+  <source>
+    <name>delay</name>
+    <type>int</type>
+    <vlen>1</vlen>
+    <optional>1</optional>
+  </source>
+  <doc>State machine for correlation.
+
+Performs a search for the highest correlation value.
+
+Sends commands of the form:
+	PMT::Pair(PMT::String name, PMT::Int val)
+
+	where 'name' is the name of the "Controlled Delay" block to receive the command and 'val' is the new delay value to use.
+
+Takes commands of the form:
+	PMT::String("RESET")
+
+	which causes the state machine to reset and restart it's search.
+
+Algorithm:
+	values = [0 | i &lt;- [0..max_delay-1] ]	
+	
+	for delay = [0..max_delay-1]
+		set_delay(delay)
+		value[delay] = get_corr_value()
+
+	max_val = max(values)
+	best_delay = values.index_of(max_value)
+
+/home/mwezz/GNURadio/.grc_gnuradio/corr_state_machine_v1.py</doc>
+</block>

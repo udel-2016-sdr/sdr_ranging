@@ -1,0 +1,42 @@
+<block>
+  <name>Correlator Kernew</name>
+  <key>correlator_kernel</key>
+  <category>[GRC Hier Blocks]</category>
+  <import>from correlator_kernel import correlator_kernel  # grc-generated hier_block</import>
+  <make>correlator_kernel(
+    int_period=$int_period,
+)</make>
+  <callback>set_int_period($int_period)</callback>
+  <param>
+    <name>Integration Period</name>
+    <key>int_period</key>
+    <value>32</value>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>recv</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </sink>
+  <sink>
+    <name>ref</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </source>
+  <doc>Performs IQ value correlation between recv and ref.
+
+Algorithm:
+	I = [recv[t].I * ref[t].I | t &lt;- [0..int_period-1] ]
+	Q = [recv[t].Q * ref[t].Q | t &lt;- [0..int_period-1] ]
+
+	out.I = sum(I)
+	out.Q = sum(Q)
+
+/home/mwezz/GNURadio/.grc_gnuradio/correlator_kernel.py</doc>
+  <grc_source>/home/mwezz/GNURadio/correlator_kernel.grc</grc_source>
+</block>

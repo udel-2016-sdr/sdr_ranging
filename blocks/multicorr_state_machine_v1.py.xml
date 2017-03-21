@@ -1,0 +1,62 @@
+<block>
+  <name>Multicorrelator State Machine (v1)</name>
+  <key>multicorr_state_machine_v1</key>
+  <category>[GRC Hier Blocks]</category>
+  <import>from multicorr_state_machine_v1 import multicorr_state_machine_v1  # grc-generated hier_block</import>
+  <make>multicorr_state_machine_v1(
+    early_dly_cont_name=$early_dly_cont_name,
+    prompt_dly_cont_name=$prompt_dly_cont_name,
+    late_dly_cont_name=$late_dly_cont_name,
+    max_delay=$max_delay,
+)</make>
+  <callback>set_early_dly_cont_name($early_dly_cont_name)</callback>
+  <callback>set_prompt_dly_cont_name($prompt_dly_cont_name)</callback>
+  <callback>set_late_dly_cont_name($late_dly_cont_name)</callback>
+  <callback>set_max_delay($max_delay)</callback>
+  <param>
+    <name>Early Delay Controller Name</name>
+    <key>early_dly_cont_name</key>
+    <value></value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Prompt Delay Controller Name</name>
+    <key>prompt_dly_cont_name</key>
+    <value></value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Late Delay Controller Name</name>
+    <key>late_dly_cont_name</key>
+    <value></value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Maximum Delay</name>
+    <key>max_delay</key>
+    <value>0</value>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>sm_cmd</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+  <sink>
+    <name>corr_values</name>
+    <type>float</type>
+    <vlen>3</vlen>
+  </sink>
+  <source>
+    <name>delay_cmd</name>
+    <type>message</type>
+  </source>
+  <source>
+    <name>delays</name>
+    <type>int</type>
+    <vlen>3</vlen>
+    <optional>1</optional>
+  </source>
+  <doc>/home/mwezz/GNURadio/.grc_gnuradio/multicorr_state_machine_v1.py</doc>
+  <grc_source>/home/mwezz/GNURadio/multicorrelator_state_machine.grc</grc_source>
+</block>

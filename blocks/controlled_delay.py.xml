@@ -1,0 +1,48 @@
+<block>
+  <name>Controlled Delay</name>
+  <key>controlled_delay</key>
+  <category>[GRC Hier Blocks]</category>
+  <import>from controlled_delay import controlled_delay  # grc-generated hier_block</import>
+  <make>controlled_delay(
+    init_delay=$init_delay,
+    name=$name,
+)</make>
+  <callback>set_init_delay($init_delay)</callback>
+  <callback>set_name($name)</callback>
+  <param>
+    <name>Initial Delay</name>
+    <key>init_delay</key>
+    <value>0</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Controller Name</name>
+    <key>name</key>
+    <value></value>
+    <type>string</type>
+  </param>
+  <sink>
+    <name>command</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </source>
+  <doc>Message controlled variable delay block.
+	  
+Commands can be of the form:
+	PMT::Pair(PMT::String name, PMT::Int val) or
+	PMT::Dict((PMT::String name, PMT::Int val))
+	
+	where 'name' is the controller name and 'val' is a positive integer.
+/home/mwezz/GNURadio/.grc_gnuradio/controlled_delay.py</doc>
+  <grc_source>/home/mwezz/GNURadio/controlled_delay.grc</grc_source>
+</block>
