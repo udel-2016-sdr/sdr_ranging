@@ -1,8 +1,8 @@
 <block>
-  <name>Controlled Delay</name>
-  <key>controlled_delay</key>
+  <name>3Tap Controlled Delay</name>
+  <key>three_tap_controlled_delay</key>
   <category>[GRC Hier Blocks]</category>
-  <import>from controlled_delay import controlled_delay  # grc-generated hier_block</import>
+  <import>from three_tap_controlled_delay import three_tap_controlled_delay  # grc-generated hier_block</import>
   <make>controlled_delay(
     init_delay=$init_delay,
     name=$name,
@@ -32,17 +32,27 @@
     <vlen>1</vlen>
   </sink>
   <source>
-    <name>out</name>
+    <name>out0</name>
     <type>complex</type>
     <vlen>1</vlen>
   </source>
-  <doc>Message controlled variable delay block.
+  <source>
+    <name>out1</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </source>
+  <source>
+    <name>out2</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </source>
+  <doc>Message controlled three tap variable delay block.
 	  
 Commands can be of the form:
-	PMT::Pair(PMT::String name, PMT::Int val) or
-	PMT::Dict((PMT::String name, PMT::Int val))
+	PMT::Pair(PMT::String name, PMT::u32Vector vals) or
+	PMT::Dict((PMT::String name, PMT::u32Vector vals))
 	
-	where 'name' is the controller name and 'val' is a positive integer.
+	where 'name' is the controller name and 'vals' is a three element vector of positive integers.
 	
-/home/mwezz/GNURadio/.grc_gnuradio/controlled_delay.py</doc>
+/home/mwezz/GNURadio/.grc_gnuradio/three_tap_controlled_delay.py</doc>
 </block>

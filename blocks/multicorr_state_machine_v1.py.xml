@@ -4,30 +4,14 @@
   <category>[GRC Hier Blocks]</category>
   <import>from multicorr_state_machine_v1 import multicorr_state_machine_v1  # grc-generated hier_block</import>
   <make>multicorr_state_machine_v1(
-    early_dly_cont_name=$early_dly_cont_name,
-    prompt_dly_cont_name=$prompt_dly_cont_name,
-    late_dly_cont_name=$late_dly_cont_name,
+    dly_cont_name=$early_dly_cont_name,
     max_delay=$max_delay,
 )</make>
-  <callback>set_early_dly_cont_name($early_dly_cont_name)</callback>
-  <callback>set_prompt_dly_cont_name($prompt_dly_cont_name)</callback>
-  <callback>set_late_dly_cont_name($late_dly_cont_name)</callback>
+  <callback>set_dly_cont_name($early_dly_cont_name)</callback>
   <callback>set_max_delay($max_delay)</callback>
   <param>
-    <name>Early Delay Controller Name</name>
-    <key>early_dly_cont_name</key>
-    <value></value>
-    <type>string</type>
-  </param>
-  <param>
-    <name>Prompt Delay Controller Name</name>
-    <key>prompt_dly_cont_name</key>
-    <value></value>
-    <type>string</type>
-  </param>
-  <param>
-    <name>Late Delay Controller Name</name>
-    <key>late_dly_cont_name</key>
+    <name>Delay Controller Name</name>
+    <key>dly_cont_name</key>
     <value></value>
     <type>string</type>
   </param>
@@ -57,6 +41,22 @@
     <vlen>3</vlen>
     <optional>1</optional>
   </source>
-  <doc>/home/mwezz/GNURadio/.grc_gnuradio/multicorr_state_machine_v1.py</doc>
-  <grc_source>/home/mwezz/GNURadio/multicorrelator_state_machine.grc</grc_source>
+  <doc>State machine for multicorrelation.
+
+Performs a search for the highest correlation value.
+
+Sends commands of the form:
+	PMT::Pair(PMT::String name, PMT::u32vector vals)
+
+	where 'name' is the name of the "Controlled Delay" block to receive the command and 'vals' is a element vector of the new delay values to use.
+
+Takes commands of the form:
+	PMT::String("RESET")
+
+	which causes the state machine to reset and restart it's search.
+
+Algorithm:
+	//TODO
+
+/home/mwezz/GNURadio/.grc_gnuradio/multicorr_state_machine_v1.py</doc>
 </block>

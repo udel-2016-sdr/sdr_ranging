@@ -105,7 +105,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 556)</value>
+      <value>(8, 628)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -148,7 +148,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(632, 144)</value>
+      <value>(480, 144)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -191,7 +191,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(632, 336)</value>
+      <value>(480, 304)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -234,7 +234,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(632, 240)</value>
+      <value>(480, 224)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -277,7 +277,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(368, 512)</value>
+      <value>(368, 584)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -332,7 +332,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(176, 484)</value>
+      <value>(176, 556)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -379,7 +379,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(176, 556)</value>
+      <value>(176, 628)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -430,7 +430,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(840, 208)</value>
+      <value>(688, 192)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -462,147 +462,6 @@
     </param>
   </block>
   <block>
-    <key>controlled_delay</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>name</key>
-      <value>early</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(224, 160)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>controlled_delay_early</value>
-    </param>
-    <param>
-      <key>init_delay</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>controlled_delay</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>name</key>
-      <value>late</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(224, 352)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>controlled_delay_late</value>
-    </param>
-    <param>
-      <key>init_delay</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>controlled_delay</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>name</key>
-      <value>prompt</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(224, 256)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>controlled_delay_prompt</value>
-    </param>
-    <param>
-      <key>init_delay</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>correlator_kernel</key>
     <param>
       <key>alias</key>
@@ -622,7 +481,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(448, 128)</value>
+      <value>(296, 128)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -665,7 +524,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(448, 320)</value>
+      <value>(296, 288)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -708,7 +567,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(448, 224)</value>
+      <value>(296, 208)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -832,8 +691,8 @@
       <value></value>
     </param>
     <param>
-      <key>early_dly_cont_name</key>
-      <value>early</value>
+      <key>dly_cont_name</key>
+      <value>delay</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -841,7 +700,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 464)</value>
+      <value>(528, 544)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -850,10 +709,6 @@
     <param>
       <key>id</key>
       <value>multicorr_state_machine_v1_0</value>
-    </param>
-    <param>
-      <key>late_dly_cont_name</key>
-      <value>late</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -866,10 +721,6 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>prompt_dly_cont_name</key>
-      <value>prompt</value>
     </param>
   </block>
   <block>
@@ -884,7 +735,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1032, 196)</value>
+      <value>(880, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -927,7 +778,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(840, 508)</value>
+      <value>(832, 580)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1013,7 +864,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 436)</value>
+      <value>(8, 508)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1056,7 +907,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 380)</value>
+      <value>(8, 452)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1174,6 +1025,53 @@
     </param>
   </block>
   <block>
+    <key>three_tap_controlled_delay</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>name</key>
+      <value>delay</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(224, 392)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>three_tap_controlled_delay_0</value>
+    </param>
+    <param>
+      <key>init_delay</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>virtual_sink</key>
     <param>
       <key>comment</key>
@@ -1185,7 +1083,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(840, 452)</value>
+      <value>(832, 524)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1212,7 +1110,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1032, 268)</value>
+      <value>(880, 252)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1228,6 +1126,87 @@
     </param>
   </block>
   <block>
+    <key>virtual_sink</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(464, 372)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>virtual_sink_4</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>early</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_sink</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(464, 420)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>virtual_sink_4_0</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>prompt</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_sink</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(464, 468)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>virtual_sink_4_1</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>late</value>
+    </param>
+  </block>
+  <block>
     <key>virtual_source</key>
     <param>
       <key>comment</key>
@@ -1239,7 +1218,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 252)</value>
+      <value>(8, 396)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1266,7 +1245,34 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 492)</value>
+      <value>(120, 156)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>virtual_source_1</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>early</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_source</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(8, 564)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1279,6 +1285,60 @@
     <param>
       <key>stream_id</key>
       <value>int1</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_source</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(120, 236)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>virtual_source_2</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>prompt</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_source</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(120, 316)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>virtual_source_3</value>
+    </param>
+    <param>
+      <key>stream_id</key>
+      <value>late</value>
     </param>
   </block>
   <connection>
@@ -1336,24 +1396,6 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>controlled_delay_early</source_block_id>
-    <sink_block_id>correlator_kernel_early</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>controlled_delay_late</source_block_id>
-    <sink_block_id>correlator_kernel_late</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>controlled_delay_prompt</source_block_id>
-    <sink_block_id>correlator_kernel_prompt</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
-  </connection>
-  <connection>
     <source_block_id>correlator_kernel_early</source_block_id>
     <sink_block_id>blocks_complex_to_real_0</sink_block_id>
     <source_key>0</source_key>
@@ -1409,44 +1451,56 @@
   </connection>
   <connection>
     <source_block_id>pad_source_1</source_block_id>
-    <sink_block_id>controlled_delay_early</sink_block_id>
+    <sink_block_id>three_tap_controlled_delay_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>pad_source_1</source_block_id>
-    <sink_block_id>controlled_delay_late</sink_block_id>
+    <source_block_id>three_tap_controlled_delay_0</source_block_id>
+    <sink_block_id>virtual_sink_4</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>pad_source_1</source_block_id>
-    <sink_block_id>controlled_delay_prompt</sink_block_id>
-    <source_key>0</source_key>
+    <source_block_id>three_tap_controlled_delay_0</source_block_id>
+    <sink_block_id>virtual_sink_4_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>three_tap_controlled_delay_0</source_block_id>
+    <sink_block_id>virtual_sink_4_1</sink_block_id>
+    <source_key>2</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>virtual_source_0</source_block_id>
-    <sink_block_id>controlled_delay_early</sink_block_id>
+    <sink_block_id>three_tap_controlled_delay_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>command</sink_key>
   </connection>
   <connection>
-    <source_block_id>virtual_source_0</source_block_id>
-    <sink_block_id>controlled_delay_late</sink_block_id>
-    <source_key>out</source_key>
-    <sink_key>command</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>virtual_source_0</source_block_id>
-    <sink_block_id>controlled_delay_prompt</sink_block_id>
-    <source_key>out</source_key>
-    <sink_key>command</sink_key>
+    <source_block_id>virtual_source_1</source_block_id>
+    <sink_block_id>correlator_kernel_early</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
   </connection>
   <connection>
     <source_block_id>virtual_source_1_0</source_block_id>
     <sink_block_id>blocks_integrate_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>virtual_source_2</source_block_id>
+    <sink_block_id>correlator_kernel_prompt</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>virtual_source_3</source_block_id>
+    <sink_block_id>correlator_kernel_late</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
   </connection>
 </flow_graph>
