@@ -2,7 +2,7 @@
   <name>3Tap Controlled Delay</name>
   <key>three_tap_controlled_delay</key>
   <category>[GRC Hier Blocks]</category>
-  <import>from three_tap_controlled_delay import three_tap_controlled_delay  # grc-generated hier_block</import>
+  <import>from three_tap_controlled_delay import three_tap_controlled_delay</import>
   <make>three_tap_controlled_delay(
     init_delay=$init_delay,
     name=$name,
