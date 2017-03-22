@@ -41,13 +41,13 @@ class three_tap_controlled_delay(gr.hier_block2):
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.blocks_delay_0, 0), (self, 0))
-        self.connect((self.blocks_delay_1, 0), (self, 0))
-        self.connect((self.blocks_delay_2, 0), (self, 0))
-
         self.connect((self, 0), (self.blocks_delay_0, 0))
-        self.connect((self, 1), (self.blocks_delay_1, 0))
-        self.connect((self, 2), (self.blocks_delay_2, 0))
+        self.connect((self, 0), (self.blocks_delay_1, 0))
+        self.connect((self, 0), (self.blocks_delay_2, 0))
+
+        self.connect((self.blocks_delay_0, 0), (self, 0))
+        self.connect((self.blocks_delay_1, 0), (self, 1))
+        self.connect((self.blocks_delay_2, 0), (self, 2))
 
     def get_init_delay(self):
         return self.init_delay
@@ -82,10 +82,6 @@ class three_tap_controlled_delay(gr.hier_block2):
                 delay0 = pmt.u32vector_ref(delays, 0)
                 delay1 = pmt.u32vector_ref(delays, 1)
                 delay2 = pmt.u32vector_ref(delays, 2)
-
-                delay0 = pmt.to_long(delay0)
-                delay1 = pmt.to_long(delay1)
-                delay2 = pmt.to_long(delay2)
 
                 self.blocks_delay_0.set_dly(delay0)
                 self.blocks_delay_1.set_dly(delay1)
