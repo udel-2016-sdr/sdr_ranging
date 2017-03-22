@@ -1,0 +1,82 @@
+<block>
+  <name>Multicorrelator State Machine</name>
+  <key>multicorr_state_machine_vx</key>
+  <category>[GRC Hier Blocks]</category>
+  <import>from multicorr_state_machine_$(version.fcn) import multicorr_state_machine_$(version.fcn)</import>
+  <make>multicorr_state_machine_$(version.fcn)(
+    dly_cont_name=$dly_cont_name,
+    max_delay=$max_delay,
+)</make>
+  <callback>set_dly_cont_name($early_dly_cont_name)</callback>
+  <callback>set_max_delay($max_delay)</callback>
+  <param>
+    <name>Delay Controller Name</name>
+    <key>dly_cont_name</key>
+    <value></value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Maximum Delay</name>
+    <key>max_delay</key>
+    <value>0</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>State Machine Version</name>
+    <key>version</key>
+    <type>enum</type>
+    <option>
+      <name>Version 1</name>
+      <key>version1</key>
+      <opt>fcn:v1</opt>
+    </option>
+  </param> 
+  <sink>
+    <name>sm_cmd</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+  <sink>
+    <name>corr_values</name>
+    <type>float</type>
+    <vlen>3</vlen>
+  </sink>
+  <source>
+    <name>delay_cmd</name>
+    <type>message</type>
+  </source>
+  <source>
+    <name>delays</name>
+    <type>int</type>
+    <vlen>3</vlen>
+    <optional>1</optional>
+  </source>
+  <doc>State machine for multicorrelation.
+
+Performs a search for the highest correlation value.
+
+Sends commands of the form:
+	PMT::Pair(PMT::String name, PMT::u32vector vals)
+
+	where 'name' is the name of the "Controlled Delay" block to receive the command and 'vals' is a element vector of the new delay values to use.
+
+Takes commands of the form:
+	PMT::String("RESET")
+
+	which causes the state machine to reset and restart it's search.
+
+Algorithm v1:
+	values = [0 | i &lt;- [0..max_delay-1] ]	
+	
+	for delay = [0..max_delay-1]
+		set_delay(delay)
+		value[delay] = get_corr_value()
+
+	max_val = max(values)
+	best_delay = values.index_of(max_value)
+
+	The main for loop is performed in parallel by groups of 3.
+
+
+  </doc>
+</block>
