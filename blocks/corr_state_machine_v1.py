@@ -41,7 +41,7 @@ class corr_state_machine_v1(gr.sync_block):
 
         self.values = [0 for i in xrange(self.max_delay)]
 
-        self.send_cmd(self.curr_delay % self.max_delay)
+        self.send_cmd(self.curr_delay)
 
     def work(self, input_items, output_items):
         if self.state == 'INIT':
