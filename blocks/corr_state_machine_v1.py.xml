@@ -2,7 +2,7 @@
   <name>Correlator State Machine (v1)</name>
   <key>corr_state_machine_v1</key>
   <category>[GRC Hier Blocks]</category>
-  <import>from corr_state_machine_v1 import corr_state_machine_v1</import>
+  <import>from corr_state_machine_v1 import corr_state_machine_v1  # grc-generated hier_block</import>
   <make>corr_state_machine_v1(
     dly_cont_name=$dly_cont_name,
     max_delay=$max_delay,

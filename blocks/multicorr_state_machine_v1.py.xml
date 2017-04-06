@@ -2,7 +2,7 @@
   <name>Multicorrelator State Machine (v1)</name>
   <key>multicorr_state_machine_v1</key>
   <category>[GRC Hier Blocks]</category>
-  <import>from multicorr_state_machine_v1 import multicorr_state_machine_v1</import>
+  <import>from multicorr_state_machine_v1 import multicorr_state_machine_v1  # grc-generated hier_block</import>
   <make>multicorr_state_machine_v1(
     dly_cont_name=$dly_cont_name,
     max_delay=$max_delay,
