@@ -1,0 +1,27 @@
+<block>
+  <name>PRN Sequence Source</name>
+  <key>prn_seq_source</key>
+  <category>[GRC Hier Blocks]</category>
+  <import>from prn_seq_source import prn_seq_source  # grc-generated hier_block</import>
+  <make>prn_seq_source(
+    poly=$poly,
+)</make>
+  <callback>set_poly($poly)</callback>
+  <param>
+    <name>Generator Polynomial</name>
+    <key>poly</key>
+    <value>[0,1,1]</value>
+    <type>raw</type>
+  </param>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+  <doc>PRN Sequence Generator.
+
+The generator polynomial is expected in the following format:
+
+	x^3 + x^2 + 1 -&gt; [0, 1, 1]
+
+/home/mwezz/GNURadio/.grc_gnuradio/prn_seq_source.py</doc>
+</block>
