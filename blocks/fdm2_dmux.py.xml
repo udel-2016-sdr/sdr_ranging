@@ -1,0 +1,41 @@
+<block>
+  <name>FDM (2 Slot) Demux</name>
+  <key>fdm2_dmux</key>
+  <category>[GRC Hier Blocks]</category>
+  <import>from fdm2_dmux import fdm2_dmux  # grc-generated hier_block</import>
+  <make>fdm2_dmux(
+    ch_width=$ch_width,
+    samp_rate=$samp_rate,
+)</make>
+  <callback>set_ch_width($ch_width)</callback>
+  <callback>set_samp_rate($samp_rate)</callback>
+  <param>
+    <name>Channel Width</name>
+    <key>ch_width</key>
+    <value>1000</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Sample Rate</name>
+    <key>samp_rate</key>
+    <value>32000</value>
+    <type>raw</type>
+  </param>
+  <sink>
+    <name>in0</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </sink>
+  <source>
+    <name>out0</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </source>
+  <source>
+    <name>out1</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </source>
+  <doc>/home/mwezz/GNURadio/.grc_gnuradio/fdm2_dmux.py</doc>
+  <grc_source>/home/mwezz/GNURadio/fdm2_dmux.grc</grc_source>
+</block>
