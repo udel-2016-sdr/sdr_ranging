@@ -2,7 +2,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Correlator
-# Generated: Sun Mar 19 23:51:51 2017
+# Generated: Tue Apr 25 17:15:12 2017
 ##################################################
 
 import os
@@ -10,8 +10,8 @@ import sys
 sys.path.append(os.environ.get('GRC_HIER_PATH', os.path.expanduser('~/.grc_gnuradio')))
 
 from controlled_delay import controlled_delay  # grc-generated hier_block
-from corr_state_machine_v1 import corr_state_machine_v1  # grc-generated hier_block
-from correlator_kernel import correlator_kernel  # grc-generated hier_block
+from corr_state_machine_v2 import corr_state_machine_v2  # grc-generated hier_block
+from correlator_kernel_vec import correlator_kernel_vec  # grc-generated hier_block
 from gnuradio import analog
 from gnuradio import blocks
 from gnuradio import gr
@@ -39,10 +39,10 @@ class correlator(gr.hier_block2):
         ##################################################
         # Blocks
         ##################################################
-        self.correlator_kernel_0 = correlator_kernel(
+        self.correlator_kernel_vec_0 = correlator_kernel_vec(
             int_period=(samp_rate / frequency) * int_mult,
         )
-        self.corr_state_machine_v1_0 = corr_state_machine_v1(
+        self.corr_state_machine_vx_0 = corr_state_machine_v2(
             dly_cont_name='delay',
             max_delay=samp_rate / frequency,
         )
@@ -58,17 +58,17 @@ class correlator(gr.hier_block2):
         ##################################################
         # Connections
         ##################################################
-        self.msg_connect((self.corr_state_machine_v1_0, 'delay_cmd'), (self.controlled_delay_0, 'command'))    
-        self.msg_connect((self, 'command'), (self.corr_state_machine_v1_0, 'sm_cmd'))    
+        self.msg_connect((self.corr_state_machine_vx_0, 'delay_cmd'), (self.controlled_delay_0, 'command'))    
+        self.msg_connect((self, 'command'), (self.corr_state_machine_vx_0, 'sm_cmd'))    
         self.connect((self.analog_const_source_x_0, 0), (self.blocks_divide_xx_0, 1))    
         self.connect((self.blocks_complex_to_real_0, 0), (self.blocks_integrate_xx_0, 0))    
         self.connect((self.blocks_complex_to_real_0, 0), (self, 0))    
-        self.connect((self.blocks_divide_xx_0, 0), (self.corr_state_machine_v1_0, 0))    
+        self.connect((self.blocks_divide_xx_0, 0), (self.corr_state_machine_vx_0, 0))    
         self.connect((self.blocks_integrate_xx_0, 0), (self.blocks_divide_xx_0, 0))    
-        self.connect((self.controlled_delay_0, 0), (self.correlator_kernel_0, 1))    
-        self.connect((self.corr_state_machine_v1_0, 0), (self, 1))    
-        self.connect((self.correlator_kernel_0, 0), (self.blocks_complex_to_real_0, 0))    
-        self.connect((self, 0), (self.correlator_kernel_0, 0))    
+        self.connect((self.controlled_delay_0, 0), (self.correlator_kernel_vec_0, 1))    
+        self.connect((self.corr_state_machine_vx_0, 0), (self, 1))    
+        self.connect((self.correlator_kernel_vec_0, 0), (self.blocks_complex_to_real_0, 0))    
+        self.connect((self, 0), (self.correlator_kernel_vec_0, 0))    
         self.connect((self, 1), (self.controlled_delay_0, 0))    
 
     def get_frequency(self):
@@ -76,15 +76,15 @@ class correlator(gr.hier_block2):
 
     def set_frequency(self, frequency):
         self.frequency = frequency
-        self.correlator_kernel_0.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
-        self.corr_state_machine_v1_0.set_max_delay(self.samp_rate / self.frequency)
+        self.correlator_kernel_vec_0.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
+        self.corr_state_machine_vx_0.set_max_delay(self.samp_rate / self.frequency)
 
     def get_int_mult(self):
         return self.int_mult
 
     def set_int_mult(self, int_mult):
         self.int_mult = int_mult
-        self.correlator_kernel_0.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
+        self.correlator_kernel_vec_0.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
 
     def get_poll_rate(self):
         return self.poll_rate
@@ -98,5 +98,5 @@ class correlator(gr.hier_block2):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.correlator_kernel_0.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
-        self.corr_state_machine_v1_0.set_max_delay(self.samp_rate / self.frequency)
+        self.correlator_kernel_vec_0.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
+        self.corr_state_machine_vx_0.set_max_delay(self.samp_rate / self.frequency)

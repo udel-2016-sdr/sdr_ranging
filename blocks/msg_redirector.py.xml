@@ -1,7 +1,7 @@
 <block>
   <name>Message Redirector</name>
   <key>msg_redirector</key>
-  <category>[GRC Hier Blocks]</category>
+  <category>[GRC Hier Blocks]/Utilities</category>
   <import>from msg_redirector import msg_redirector  # grc-generated hier_block</import>
   <make>msg_redirector(
     port=$port,

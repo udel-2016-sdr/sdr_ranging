@@ -1,7 +1,7 @@
 <block>
   <name>PRN Sequence Source</name>
   <key>prn_seq_source</key>
-  <category>[GRC Hier Blocks]</category>
+  <category>[GRC Hier Blocks]/Utilities</category>
   <import>from prn_seq_source import prn_seq_source  # grc-generated hier_block</import>
   <make>prn_seq_source(
     poly=$poly,

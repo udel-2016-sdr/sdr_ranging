@@ -1,7 +1,7 @@
 <block>
   <name>Multicorrelator State Machine</name>
   <key>multicorr_state_machine_vx</key>
-  <category>[GRC Hier Blocks]</category>
+  <category>[GRC Hier Blocks]/Correlators</category>
   <import>from multicorr_state_machine_$(version.fcn) import multicorr_state_machine_$(version.fcn)  # grc-generated hier_block</import>
   <make>multicorr_state_machine_$(version.fcn)(
     dly_cont_name=$dly_cont_name,
@@ -29,6 +29,11 @@
       <name>Version 1</name>
       <key>version1</key>
       <opt>fcn:v1</opt>
+    </option>
+    <option>
+      <name>Version 2</name>
+      <key>version2</key>
+      <opt>fcn:v2</opt>
     </option>
   </param> 
   <sink>

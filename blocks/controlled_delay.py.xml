@@ -1,7 +1,7 @@
 <block>
   <name>Controlled Delay</name>
   <key>controlled_delay</key>
-  <category>[GRC Hier Blocks]</category>
+  <category>[GRC Hier Blocks]/Controlled Delays</category>
   <import>from controlled_delay import controlled_delay  # grc-generated hier_block</import>
   <make>controlled_delay(
     init_delay=$init_delay,

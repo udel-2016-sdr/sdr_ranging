@@ -14,7 +14,7 @@
     </param>
     <param>
       <key>category</key>
-      <value>[GRC Hier Blocks]</value>
+      <value>[GRC Hier Blocks]/Correlators</value>
     </param>
     <param>
       <key>comment</key>
@@ -148,7 +148,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(624, 192)</value>
+      <value>(648, 192)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -297,7 +297,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(232, 256)</value>
+      <value>(232, 248)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -321,7 +321,7 @@
     </param>
   </block>
   <block>
-    <key>corr_state_machine_v1</key>
+    <key>corr_state_machine_vx</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -344,7 +344,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(488, 368)</value>
+      <value>(496, 364)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -352,7 +352,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>corr_state_machine_v1_0</value>
+      <value>corr_state_machine_vx_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -366,9 +366,13 @@
       <key>minoutbuf</key>
       <value>0</value>
     </param>
+    <param>
+      <key>version</key>
+      <value>version2</value>
+    </param>
   </block>
   <block>
-    <key>correlator_kernel</key>
+    <key>correlator_kernel_vec</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -395,7 +399,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>correlator_kernel_0</value>
+      <value>correlator_kernel_vec_0</value>
     </param>
     <param>
       <key>int_period</key>
@@ -508,7 +512,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(808, 164)</value>
+      <value>(832, 164)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -836,7 +840,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(808, 220)</value>
+      <value>(832, 220)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -925,7 +929,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_divide_xx_0</source_block_id>
-    <sink_block_id>corr_state_machine_v1_0</sink_block_id>
+    <sink_block_id>corr_state_machine_vx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -937,37 +941,37 @@
   </connection>
   <connection>
     <source_block_id>controlled_delay_0</source_block_id>
-    <sink_block_id>correlator_kernel_0</sink_block_id>
+    <sink_block_id>correlator_kernel_vec_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>1</sink_key>
   </connection>
   <connection>
-    <source_block_id>corr_state_machine_v1_0</source_block_id>
+    <source_block_id>corr_state_machine_vx_0</source_block_id>
     <sink_block_id>pad_sink_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>corr_state_machine_v1_0</source_block_id>
+    <source_block_id>corr_state_machine_vx_0</source_block_id>
     <sink_block_id>virtual_sink_0</sink_block_id>
     <source_key>delay_cmd</source_key>
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>correlator_kernel_0</source_block_id>
+    <source_block_id>correlator_kernel_vec_0</source_block_id>
     <sink_block_id>blocks_complex_to_real_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>pad_source_0</source_block_id>
-    <sink_block_id>corr_state_machine_v1_0</sink_block_id>
+    <sink_block_id>corr_state_machine_vx_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>sm_cmd</sink_key>
   </connection>
   <connection>
     <source_block_id>pad_source_1</source_block_id>
-    <sink_block_id>correlator_kernel_0</sink_block_id>
+    <sink_block_id>correlator_kernel_vec_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

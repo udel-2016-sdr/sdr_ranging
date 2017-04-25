@@ -14,7 +14,7 @@
     </param>
     <param>
       <key>category</key>
-      <value>[GRC Hier Blocks]</value>
+      <value>[GRC Hier Blocks]/Correlators</value>
     </param>
     <param>
       <key>comment</key>
@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>correlator_kernel</value>
+      <value>correlator_kernel_vec</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -78,7 +78,7 @@
     </param>
     <param>
       <key>title</key>
-      <value>Correlator Kernel</value>
+      <value>Correlator Kernel (Vec)</value>
     </param>
   </block>
   <block>

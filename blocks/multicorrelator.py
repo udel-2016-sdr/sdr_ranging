@@ -2,19 +2,19 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Multicorrelator
-# Generated: Wed Mar 22 00:25:16 2017
+# Generated: Tue Apr 25 17:15:19 2017
 ##################################################
 
 import os
 import sys
 sys.path.append(os.environ.get('GRC_HIER_PATH', os.path.expanduser('~/.grc_gnuradio')))
 
-from correlator_kernel import correlator_kernel  # grc-generated hier_block
+from correlator_kernel_vec import correlator_kernel_vec  # grc-generated hier_block
 from gnuradio import analog
 from gnuradio import blocks
 from gnuradio import gr
 from gnuradio.filter import firdes
-from multicorr_state_machine_v1 import multicorr_state_machine_v1  # grc-generated hier_block
+from multicorr_state_machine_v2 import multicorr_state_machine_v2  # grc-generated hier_block
 from three_tap_controlled_delay import three_tap_controlled_delay  # grc-generated hier_block
 
 
@@ -43,17 +43,17 @@ class multicorrelator(gr.hier_block2):
             init_delay=0,
             name='delay',
         )
-        self.multicorr_state_machine_v1_0 = multicorr_state_machine_v1(
+        self.multicorr_state_machine_vx_0 = multicorr_state_machine_v2(
             dly_cont_name='delay',
             max_delay=samp_rate / frequency,
         )
-        self.correlator_kernel_prompt = correlator_kernel(
+        self.correlator_kernel_prompt = correlator_kernel_vec(
             int_period=(samp_rate / frequency) * int_mult,
         )
-        self.correlator_kernel_late = correlator_kernel(
+        self.correlator_kernel_late = correlator_kernel_vec(
             int_period=(samp_rate / frequency) * int_mult,
         )
-        self.correlator_kernel_early = correlator_kernel(
+        self.correlator_kernel_early = correlator_kernel_vec(
             int_period=(samp_rate / frequency) * int_mult,
         )
         self.blocks_streams_to_vector_0 = blocks.streams_to_vector(gr.sizeof_float*1, 3)
@@ -68,13 +68,13 @@ class multicorrelator(gr.hier_block2):
         ##################################################
         # Connections
         ##################################################
-        self.msg_connect((self.multicorr_state_machine_v1_0, 'delay_cmd'), (self.three_tap_controlled_delay_0, 'command'))    
-        self.msg_connect((self, 'command'), (self.multicorr_state_machine_v1_0, 'sm_cmd'))    
+        self.msg_connect((self.multicorr_state_machine_vx_0, 'delay_cmd'), (self.three_tap_controlled_delay_0, 'command'))    
+        self.msg_connect((self, 'command'), (self.multicorr_state_machine_vx_0, 'sm_cmd'))    
         self.connect((self.analog_const_source_x_0, 0), (self.blocks_stream_to_vector_0, 0))    
         self.connect((self.blocks_complex_to_real_0, 0), (self.blocks_streams_to_vector_0, 0))    
         self.connect((self.blocks_complex_to_real_0_0, 0), (self.blocks_streams_to_vector_0, 2))    
         self.connect((self.blocks_complex_to_real_0_1, 0), (self.blocks_streams_to_vector_0, 1))    
-        self.connect((self.blocks_divide_xx_0, 0), (self.multicorr_state_machine_v1_0, 0))    
+        self.connect((self.blocks_divide_xx_0, 0), (self.multicorr_state_machine_vx_0, 0))    
         self.connect((self.blocks_integrate_xx_0, 0), (self.blocks_divide_xx_0, 0))    
         self.connect((self.blocks_stream_to_vector_0, 0), (self.blocks_divide_xx_0, 1))    
         self.connect((self.blocks_streams_to_vector_0, 0), (self.blocks_integrate_xx_0, 0))    
@@ -82,7 +82,7 @@ class multicorrelator(gr.hier_block2):
         self.connect((self.correlator_kernel_early, 0), (self.blocks_complex_to_real_0, 0))    
         self.connect((self.correlator_kernel_late, 0), (self.blocks_complex_to_real_0_0, 0))    
         self.connect((self.correlator_kernel_prompt, 0), (self.blocks_complex_to_real_0_1, 0))    
-        self.connect((self.multicorr_state_machine_v1_0, 0), (self, 1))    
+        self.connect((self.multicorr_state_machine_vx_0, 0), (self, 1))    
         self.connect((self, 0), (self.correlator_kernel_early, 0))    
         self.connect((self, 0), (self.correlator_kernel_late, 0))    
         self.connect((self, 0), (self.correlator_kernel_prompt, 0))    
@@ -96,7 +96,7 @@ class multicorrelator(gr.hier_block2):
 
     def set_frequency(self, frequency):
         self.frequency = frequency
-        self.multicorr_state_machine_v1_0.set_max_delay(self.samp_rate / self.frequency)
+        self.multicorr_state_machine_vx_0.set_max_delay(self.samp_rate / self.frequency)
         self.correlator_kernel_prompt.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
         self.correlator_kernel_late.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
         self.correlator_kernel_early.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
@@ -122,7 +122,7 @@ class multicorrelator(gr.hier_block2):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.multicorr_state_machine_v1_0.set_max_delay(self.samp_rate / self.frequency)
+        self.multicorr_state_machine_vx_0.set_max_delay(self.samp_rate / self.frequency)
         self.correlator_kernel_prompt.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
         self.correlator_kernel_late.set_int_period((self.samp_rate / self.frequency) * self.int_mult)
         self.correlator_kernel_early.set_int_period((self.samp_rate / self.frequency) * self.int_mult)

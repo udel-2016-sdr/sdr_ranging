@@ -14,7 +14,7 @@
     </param>
     <param>
       <key>category</key>
-      <value>[GRC Hier Blocks]</value>
+      <value>[GRC Hier Blocks]/Correlators</value>
     </param>
     <param>
       <key>comment</key>
@@ -148,7 +148,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(480, 144)</value>
+      <value>(488, 144)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -191,7 +191,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(480, 304)</value>
+      <value>(488, 304)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -234,7 +234,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(480, 224)</value>
+      <value>(488, 224)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -430,7 +430,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(688, 192)</value>
+      <value>(696, 192)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -462,7 +462,7 @@
     </param>
   </block>
   <block>
-    <key>correlator_kernel</key>
+    <key>correlator_kernel_vec</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -481,7 +481,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(296, 128)</value>
+      <value>(280, 128)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -505,7 +505,7 @@
     </param>
   </block>
   <block>
-    <key>correlator_kernel</key>
+    <key>correlator_kernel_vec</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -524,7 +524,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(296, 288)</value>
+      <value>(280, 288)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -548,7 +548,7 @@
     </param>
   </block>
   <block>
-    <key>correlator_kernel</key>
+    <key>correlator_kernel_vec</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -567,7 +567,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(296, 208)</value>
+      <value>(280, 208)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -677,7 +677,7 @@
     </param>
   </block>
   <block>
-    <key>multicorr_state_machine_v1</key>
+    <key>multicorr_state_machine_vx</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -700,7 +700,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 544)</value>
+      <value>(544, 540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -708,7 +708,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>multicorr_state_machine_v1_0</value>
+      <value>multicorr_state_machine_vx_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -721,6 +721,10 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>version</key>
+      <value>version2</value>
     </param>
   </block>
   <block>
@@ -735,7 +739,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(880, 180)</value>
+      <value>(888, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -821,49 +825,6 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 124)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>pad_source_0</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>recv</value>
-    </param>
-    <param>
-      <key>num_streams</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>optional</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>pad_source</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
       <value>(8, 508)</value>
     </param>
     <param>
@@ -872,7 +833,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>pad_source_0_0</value>
+      <value>pad_source_0</value>
     </param>
     <param>
       <key>label</key>
@@ -907,7 +868,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 452)</value>
+      <value>(8, 124)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -916,6 +877,49 @@
     <param>
       <key>id</key>
       <value>pad_source_1</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>recv</value>
+    </param>
+    <param>
+      <key>num_streams</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>optional</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>pad_source</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(8, 452)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>pad_source_2</value>
     </param>
     <param>
       <key>label</key>
@@ -1110,7 +1114,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(880, 252)</value>
+      <value>(888, 252)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1367,7 +1371,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_divide_xx_0</source_block_id>
-    <sink_block_id>multicorr_state_machine_v1_0</sink_block_id>
+    <sink_block_id>multicorr_state_machine_vx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1414,43 +1418,43 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>multicorr_state_machine_v1_0</source_block_id>
+    <source_block_id>multicorr_state_machine_vx_0</source_block_id>
     <sink_block_id>virtual_sink_0</sink_block_id>
     <source_key>delay_cmd</source_key>
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>multicorr_state_machine_v1_0</source_block_id>
+    <source_block_id>multicorr_state_machine_vx_0</source_block_id>
     <sink_block_id>pad_sink_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>pad_source_0</source_block_id>
-    <sink_block_id>correlator_kernel_early</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>pad_source_0</source_block_id>
-    <sink_block_id>correlator_kernel_late</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>pad_source_0</source_block_id>
-    <sink_block_id>correlator_kernel_prompt</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>pad_source_0_0</source_block_id>
-    <sink_block_id>multicorr_state_machine_v1_0</sink_block_id>
+    <sink_block_id>multicorr_state_machine_vx_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>sm_cmd</sink_key>
   </connection>
   <connection>
     <source_block_id>pad_source_1</source_block_id>
+    <sink_block_id>correlator_kernel_early</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>pad_source_1</source_block_id>
+    <sink_block_id>correlator_kernel_late</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>pad_source_1</source_block_id>
+    <sink_block_id>correlator_kernel_prompt</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>pad_source_2</source_block_id>
     <sink_block_id>three_tap_controlled_delay_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>

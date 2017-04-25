@@ -1,7 +1,7 @@
 <block>
   <name>Correlator</name>
   <key>correlator</key>
-  <category>[GRC Hier Blocks]</category>
+  <category>[GRC Hier Blocks]/Correlators</category>
   <import>from correlator import correlator  # grc-generated hier_block</import>
   <make>correlator(
     frequency=$frequency,
@@ -17,25 +17,25 @@
     <name>Frequency</name>
     <key>frequency</key>
     <value>1000</value>
-    <type>int</type>
+    <type>raw</type>
   </param>
   <param>
     <name>Integration Period Multiplier</name>
     <key>int_mult</key>
     <value>1</value>
-    <type>int</type>
+    <type>raw</type>
   </param>
   <param>
     <name>State Machine Poll Rate</name>
     <key>poll_rate</key>
     <value>1</value>
-    <type>int</type>
+    <type>raw</type>
   </param>
   <param>
     <name>Sample Rate</name>
     <key>samp_rate</key>
     <value>32000</value>
-    <type>int</type>
+    <type>raw</type>
   </param>
   <sink>
     <name>command</name>

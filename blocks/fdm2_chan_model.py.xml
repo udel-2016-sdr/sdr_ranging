@@ -1,0 +1,70 @@
+<block>
+  <name>FDM (2 Slot) Channel Model</name>
+  <key>fdm2_chan_model</key>
+  <category>[GRC Hier Blocks]/FDM</category>
+  <import>from fdm2_chan_model import fdm2_chan_model  # grc-generated hier_block</import>
+  <make>fdm2_chan_model(
+    ch_width=$ch_width,
+    freq_offset=$freq_offset,
+    noise_volt=$noise_volt,
+    samp_rate=$samp_rate,
+    seed=$seed,
+)</make>
+  <callback>set_ch_width($ch_width)</callback>
+  <callback>set_freq_offset($freq_offset)</callback>
+  <callback>set_noise_volt($noise_volt)</callback>
+  <callback>set_samp_rate($samp_rate)</callback>
+  <callback>set_seed($seed)</callback>
+  <param>
+    <name>Channel Width</name>
+    <key>ch_width</key>
+    <value>1000</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Frequency Offset</name>
+    <key>freq_offset</key>
+    <value>0</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Noise Voltage</name>
+    <key>noise_volt</key>
+    <value>0</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Sample Rate</name>
+    <key>samp_rate</key>
+    <value>32000</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Seed</name>
+    <key>seed</key>
+    <value>0</value>
+    <type>raw</type>
+  </param>
+  <sink>
+    <name>in0</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </sink>
+  <sink>
+    <name>in1</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </sink>
+  <source>
+    <name>out0</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </source>
+  <source>
+    <name>out1</name>
+    <type>complex</type>
+    <vlen>1</vlen>
+  </source>
+  <doc>/home/mwezz/GNURadio/.grc_gnuradio/fdm2_chan_model.py</doc>
+  <grc_source>/home/mwezz/GNURadio/fdm2_chan_model.grc</grc_source>
+</block>

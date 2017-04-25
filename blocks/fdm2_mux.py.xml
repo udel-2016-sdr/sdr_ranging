@@ -1,7 +1,7 @@
 <block>
   <name>FDM (2 Slot) Mux</name>
   <key>fdm2_mux</key>
-  <category>[GRC Hier Blocks]</category>
+  <category>[GRC Hier Blocks]/FDM</category>
   <import>from fdm2_mux import fdm2_mux  # grc-generated hier_block</import>
   <make>fdm2_mux(
     ch_width=$ch_width,
